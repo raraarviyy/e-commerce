@@ -42,23 +42,31 @@
   </header>
   
   <!-- Spacer supaya konten tidak ketiban navbar -->
-  <div class="h-[90px]"></div>
-  
-  
-    <!-- Hero Section -->
-    <section class="flex justify-between items-center px-16 py-3 bg-[#fef6ef]">
-      <div class="max-w-lg">
-        <h1 class="text-5xl font-bold leading-tight">FASHION NEW<br/>COLLECTION</h1>
-        <p class="mt-6 text-sm text-gray-700">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
-      </div>
-      <div>
-        <img src="src/image/jordan.png" alt="Model Fashion" class="h-[450px] object-contain"/>
-      </div>
-    </section>
+<!-- Spacer -->
+<div class="h-[90px]"></div>
+
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-8 bg-[#fef6ef]">
+  <!-- Text -->
+  <div class="max-w-lg text-center md:text-left mb-6 md:mb-0">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+      FASHION NEW <br /> COLLECTION
+    </h1>
+    <p class="mt-4 text-sm sm:text-base text-gray-700">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+  </div>
+
+  <!-- Image -->
+  <div class="flex justify-center md:justify-end">
+    <img src="src/image/jordan.png" 
+         alt="Model Fashion" 
+         class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain"/>
+  </div>
+</section>
+
 
     <section class="bg-gray-50 font-sans">
      <div class="px-6 py-12">
@@ -100,40 +108,45 @@
     </div>
   </section>
 
-  <div class="max-w-7xl mx-auto px-4 py-8"></div>
-  <h1 class="text-3xl font-bold mb-6 text-center">KATEGORI</h1> 
- <div class="bg-[#e6c3a1] p-6 col-span-1 mr-260 ml-10">
-   <div class="flex-grow">
-          <input
-            type="text"
-            placeholder="Search"
-            class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
-          />
-    </div>
+ <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar Kategori -->
+            <div class="w-full md:w-1/4 bg-[#e6c3a1] p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4">Search</h2>
+                <div class="mb-6">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+                    />
+                </div>
+                <ul class="space-y-2 mb-6 text-sm font-medium">
+                    <li><a href="#" class="hover:underline block py-1 font-semibold">All</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Kids Clothes</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Women's Clothes</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Men's Clothes</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Casual Wear</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Office Wear</a></li>
+                    <li><a href="#" class="hover:underline block py-1">Make Up</a></li>
+                </ul>
+                <button class="bg-[#c07c3a] text-white px-6 py-2 rounded-md text-sm font-semibold w-full">
+                    Explore
+                </button>
+            </div>
 
-  <ul class="space-y-2 mb-6 text-sm font-medium">
-    <li><a href="#" class="hover:underline">All</a></li>
-    <li><a href="#" class="hover:underline">Kids Clothes</a></li>
-    <li><a href="#" class="hover:underline">Women's Clothes</a></li>
-    <li><a href="#" class="hover:underline">Men's Clothes</a></li>
-    <li><a href="#" class="hover:underline">Casual Wear</a></li>
-    <li><a href="#" class="hover:underline">Office Wear</a></li>
-    <li><a href="#" class="hover:underline">Make Up</a></li>
-  </ul>
-  
-  <button class="bg-[#c07c3a] text-white px-6 py-2 rounded-md text-sm font-semibold">Explore</button>
-  
-</div>
-</div>
+            <!-- Konten Utama -->
+            <div class="w-full md:w-3/4">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-2xl font-bold">Explore</h1>
+                    <div class="w-3/4 border-t border-gray-300"></div>
+                </div>
 
-<div class="flex flex-row">
-  <!-- Kontainer produk -->
-  <div class="w-3/4">
-    <div id="products" class="flex flex-row flex-wrap ml-100 -mt-80 gap-4 p-6">
-      <!-- Cards will be injected here -->
-    </div>
-  </div>
-</div>
+                <!-- Container produk -->
+                <div id="products" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:ml-8">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+        </div>
 
    <!-- Container -->
  <div class="max-w-7xl mx-auto px-4 py-8">
@@ -141,34 +154,41 @@
   <div id="product-list" class="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-4 gap-6"></div>
 </div>
 
-<div class="bg-gray-100">
+<div class="bg-gray-100 px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Grid Produk -->
+  <div id="product-list" 
+       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  </div>
+
   <!-- Template Produk -->
-<div id="product-list" class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4"></div>
+  <template id="produk-template">
+    <div class="bg-white border rounded-lg shadow-sm p-4 hover:shadow-lg transition-shadow flex flex-col justify-between items-center">
+      
+      <!-- Product Link -->
+      <a href="detail.html" class="w-full flex flex-col items-center flex-grow">
+        <img src="" alt="Produk" 
+             class="w-full h-48 object-contain bg-gray-50 rounded">
+        <p class="mt-3 font-semibold text-gray-800 price text-sm sm:text-base">Rp0</p>
+        <h2 class="mt-2 font-bold text-gray-900 title text-center text-sm sm:text-base line-clamp-2">
+          Product Title
+        </h2>
+      </a>
 
-<template id="produk-template">
-  <div class="bg-white border rounded shadow-sm p-3 w-full max-w-xs mx-auto hover:shadow-lg transition-shadow min-h-[380px] flex flex-col justify-between items-center relative">
-    
-    <!-- Product Link -->
-    <a href="detail.html" class="w-full flex flex-col items-center flex-grow">
-      <img src="" alt="Produk" class="w-full h-48 object-contain rounded">
-      <p class="text-center mt-3 font-semibold text-gray-800 price min-h-[24px]">Rp0</p>
-      <h2 class="text-center mt-2 font-bold text-gray-900 title min-h-[48px]">Product Title</h2>
-    </a>
-
-    <!-- Tombol Checkout & Keranjang -->
-    <div class="mt-auto flex w-full gap-2 pt-4">
-        <!-- Tombol Keranjang -->
-        <button class="keranjang-btn bg-white border border-[#c88c4a] text-[#c88c4a] hover:bg-[#f8efe3] p-2 rounded flex items-center justify-center w-10 h-10">
-            🛒
+      <!-- Tombol -->
+      <div class="mt-4 flex w-full gap-2">
+        <!-- Keranjang -->
+        <button class="keranjang-btn border border-[#c88c4a] text-[#c88c4a] hover:bg-[#f8efe3] p-2 rounded flex items-center justify-center w-10 h-10">
+          🛒
         </button>
-        <!-- Tombol Checkout -->
+        <!-- Checkout -->
         <button class="checkout-btn flex-grow px-3 py-2 bg-[#c88c4a] hover:bg-[#b07a30] text-white rounded text-sm">
           Checkout
         </button>
       </div>
+    </div>
+  </template>
+</div>
 
-  </div>
-</template>
 
 
 
