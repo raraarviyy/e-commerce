@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body  class="font-sans bg-white">
+    <!-- Header -->
+   <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <div class="flex justify-between items-center px-8 py-4 border-b">
+      <!-- Kiri -->
+      <div class="flex items-center gap-4 w-full max-w-xl">
+        <span class="text-xl font-semibold">seashop</span>
+       <input
+          type="text"
+          id="search-input"
+          placeholder="Search"
+      class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+        />
+      </div>
+      
+      <!-- Kanan -->
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-gray-600">REKOMENDASI</a>
+        <a href="#" class="hover:text-gray-600">KATEGORI</a>
+        <a href="#" class="hover:text-gray-600">PRODUK</a>
+        
+        <!-- Keranjang -->
+        <a href="keranjang.html">
+         <img src="src/image/shopping-cart.png" alt="cart" class="h-6 w-6">
+        </a>
+
+        <a href="masuk.html" class="hover:text-gray-600">Masuk</a>
+        <a href="daftar.html" class="bg-[#c68a53] text-white px-4 py-1 rounded">Daftar</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Spacer supaya konten tidak ketiban navbar -->
+  <div class="h-[90px]"></div>
+  
+  
+    
+    <section class="flex justify-between items-center px-16 py-3 bg-[#fef6ef]">
+      <div class="max-w-lg">
+        <h1 class="text-5xl font-bold leading-tight">FASHION NEW<br/>COLLECTION</h1>
+        <p class="mt-6 text-sm text-gray-700">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+      </div>
+      <div>
+        <img src="src/image/jordan.png" alt="Model Fashion" class="h-[450px] object-contain"/>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 font-sans">
+     <div class="px-6 py-12">
+    <h2 class="text-center text-3xl font-bold mb-8">PRODUK TERLARIS</h2>
+
+    <div class="flex overflow-x-auto space-x-6 scrollbar-hide px-4">
+
+      <!-- Produk 1 -->
+      <div class="flex-none w-60 bg-white rounded-xl shadow-md p-4 text-center">
+        <img src="src/image/ysl.webp" alt="Cushion YSL" class="w-full h-48 object-cover rounded-lg mb-3">
+        <p class="font-semibold">Cushion YSL</p>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="flex-none w-60 bg-white rounded-xl shadow-md p-4 text-center">
+        <img src="src/image/ysl.webp" alt="Mainan Anak" class="w-full h-48 object-contain rounded-lg mb-3">
+        <p class="font-semibold">Mainan Anak</p>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="flex-none w-60 bg-white rounded-xl shadow-md p-4 text-center">
+        <img src="src/image/ysl.webp" alt="Mainan Anak" class="w-full h-48 object-cover rounded-lg mb-3">
+        <p class="font-semibold">Mainan Anak</p>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="flex-none w-60 bg-white rounded-xl shadow-md p-4 text-center">
+        <img src="/rc/image/ysl.webp" alt="Setelan Kemeja" class="w-full h-48 object-cover rounded-lg mb-3">
+        <p class="font-semibold">Setelan Kemeja</p>
+      </div>
+
+      <!-- Produk 5 -->
+      <div class="flex-none w-60 bg-white rounded-xl shadow-md p-4 text-center">
+        <img src="src/image/ysl.webp" alt="Setelan Kemeja" class="w-full h-48 object-cover rounded-lg mb-3">
+        <p class="font-semibold">Setelan Kemeja</p>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+<div class="bg-[#e6c3a1] p-6 col-span-1 mr-260 ml-10">
+   <div class="flex-grow">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+          />
+    </div>
+
+  <ul class="space-y-2 mb-6 text-sm font-medium">
+    <li><a href="#" class="hover:underline">All</a></li>
+    <li><a href="#" class="hover:underline">Kids Clothes</a></li>
+    <li><a href="#" class="hover:underline">Women's Clothes</a></li>
+    <li><a href="#" class="hover:underline">Men's Clothes</a></li>
+    <li><a href="#" class="hover:underline">Casual Wear</a></li>
+    <li><a href="#" class="hover:underline">Office Wear</a></li>
+    <li><a href="#" class="hover:underline">Make Up</a></li>
+  </ul>
+  
+  <button class="bg-[#c07c3a] text-white px-6 py-2 rounded-md text-sm font-semibold">Explore</button>
+  
+</div>
+
+<div class="flex flex-row">
+  <!-- Kontainer produk -->
+  <div class="w-3/4">
+    <div id="products" class="flex flex-row flex-wrap ml-100 -mt-80 gap-4 p-6">
+      <!-- Cards will be injected here -->
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+  
+ <!-- Container -->
+<div class="max-w-7xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6 text-center">REKOMENDASI</h1>
+  <div id="product-list" class="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-4 gap-6"></div>
+</div>
+
+<div class="bg-gray-100">
+  <!-- Template Produk -->
+  <div id="product-list" class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4"></div>
+    <template id="produk-template">
+      <div class="bg-white border rounded shadow-sm p-3 w-full max-w-xs mx-auto hover:shadow-lg transition-shadow min-h-[350px] flex flex-col items-center relative">
+      <!-- Product Link -->
+      <a href="detail copy.html" class="w-full flex flex-col items-center">
+        <img src="" alt="Produk" class="w-full h-48 object-contain rounded">
+        <p class="text-center mt-3 font-semibold text-gray-800 price min-h-[24px]">Rp0</p>
+        <h2 class="text-center mt-2 font-bold text-gray-900 title min-h-[24px]">Product Title</h2>
+      </a>
+      
+      <!-- Tombol Checkout & Keranjang -->
+      <div class="mt-auto flex w-full gap-2 pt-4">
+        <!-- Tombol Keranjang -->
+        <button class="keranjang-btn bg-white border border-[#c88c4a] text-[#c88c4a] hover:bg-[#f8efe3] p-2 rounded flex items-center justify-center w-10 h-10">
+            🛒
+        </button>
+        <!-- Tombol Checkout -->
+        <button class="checkout-btn flex-grow px-3 py-2 bg-[#c88c4a] hover:bg-[#b07a30] text-white rounded text-sm">
+          Checkout
+        </button>
+      </div>
+     </div>
+    </template>
+  </div>
+</div>
+
+ <section class="bg-[#fefef8] min-h-screen flex items-center justify-center px-6 py-10">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl w-full">
+
+    <!-- Kiri: Teks -->
+    <div class="space-y-6">
+      <h1 class="text-4xl font-bold text-gray-900">Welcome to <br> Our Shop</h1>
+      <p class="text-gray-700 leading-relaxed">
+        Lorem kwow Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+      </p>
+
+      <!-- Tombol Aksi -->
+      <div class="space-x-4">
+        <a href="daftar.html"
+           class="bg-[#c88c4a] text-white font-semibold px-6 py-2 rounded-md hover:bg-[#b57935] transition">
+          Daftar
+        </a>
+        <a href="masuk.html"
+        class="border border-[#c88c4a] text-[#c88c4a] font-semibold px-6 py-2 rounded-md hover:bg-[#f5e7d8] transition">
+          Masuk
+        </a>
+      </div>
+    </div>
+
+    <!-- Kanan: Gambar -->
+    <div class="flex justify-center">
+      <img src="src/image/Francisco_Lachowski__1_-removebg-preview.png" alt="Foto Orang dan Kuda" class="w-full max-w-sm object-cover rounded-lg ">
+    </div>
+
+  </div>
+
+</section>
+
+ <footer class="bg-[#C4854A] text-white px-6 py-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold">Langganan pelayan</h2>
+        <ul class="space-y-1 text-white">
+          <li>Metode pembayaran</li>
+          <li>Bantuan</li>
+          <li>Gratis ongkir</li>
+          <li>Pengiriman</li>
+        </ul>
+        <p class="mt-6 font-bold">©Seashop 2025</p>
+      </div>
+
+      
+      <div class="mt-10 md:mt-0 space-y-4">
+        <h2 class="text-xl">Ikuti kami</h2>
+        <ul class="space-y-2">
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/facebook.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116C23.408 24 24 23.408 24 22.674V1.326C24 .593 23.408 0 22.675 0z"/></img></span>
+            <span>Facebook</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/instagram.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.428.417a4.9 4.9 0 011.78 1.145 4.9 4.9 0 011.145 1.78c.167.458.36 1.258.417 2.428.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.417 2.428a4.9 4.9 0 01-1.145 1.78 4.9 4.9 0 01-1.78 1.145c-.458.167-1.258.36-2.428.417-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.428-.417a4.9 4.9 0 01-1.78-1.145 4.9 4.9 0 01-1.145-1.78c-.167-.458-.36-1.258-.417-2.428C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.25-1.97.417-2.428A4.9 4.9 0 013.832 2.942a4.9 4.9 0 011.78-1.145c.458-.167 1.258-.36 2.428-.417C8.416 2.212 8.8 2.2 12 2.2zm0 3.3a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 10.7a4.2 4.2 0 110-8.4 4.2 4.2 0 010 8.4zm6.6-11.7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></img></span>
+            <span>Instagram</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/youtube.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6zm12-3c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"/></img></span>
+            <span>Youtube</span>
+          </li>
+        </ul>
+        
+        <div class="flex space-x-4 mt-6">
+          <img src="src/image/Google_Play_Store_badge_EN.svg.webp" alt="Google Play" class="h-10"></img>
+          <img src="src/image/Download_on_the_App_Store_Badge.svg.webp" alt="App Store" class="h-10"></img>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/script/landing.js"></script>
+</body>
+</html>

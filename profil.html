@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body  class="font-sans bg-white">
+   <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <div class="flex justify-between items-center px-8 py-4 border-b">
+      <!-- Kiri -->
+      <div class="flex items-center gap-4 w-full max-w-xl">
+        <span class="text-xl font-semibold">seashop</span>
+        <div class="flex-grow">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+          />
+        </div>
+      </div>
+  
+      <!-- menu -->
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-gray-600">HOME</a>
+        <a href="#" class="hover:text-gray-600">REKOMENDASI</a>
+        <a href="#" class="hover:text-gray-600">KATEGORI</a>
+       
+        <!-- Keranjang -->
+         <a href="keranjang.html"></a>
+        <img src="src/image/shopping-cart.png" alt="cart" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      </img>
+    </a>
+  
+      <!-- Profile -->
+      <a href="profil.html">
+        <img src="src/image/pfp.jpeg" alt="profile" class="w-8 h-8 rounded-full object-cover">
+      </a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Spacer supaya konten tidak ketiban navbar -->
+  <div class="h-[90px]"></div>
+
+
+
+  
+
+<div class="bg-white text-gray-800 font-sans"> 
+
+  <!-- Back button + Title -->
+  <div class="flex items-center px-6 py-4 text-xl font-semibold text-[#4b2f0a]">
+    <a href="home.html" class="text-2xl mr-4">←</a>
+    Profil saya
+  </div>
+
+  <!-- Profile content -->
+  <div class="flex flex-col items-center text-center space-y-3 mt-4">
+    <img src="src/image/Francisco_Lachowski__1_-removebg-preview.png" alt="Profile" class="rounded-full w-28 h-28 object-cover" />
+    <div>
+      <h2 id="profile-username" class="text-lg font-semibold">Nama User</h2>
+      <p id="profile-address" class="text-sm text-gray-600">Alamat User</p>
+    </div>
+    <button class="px-4 py-1 border rounded text-sm text-[#7a4d1c] border-[#c88c4a] hover:bg-orange-50 transition">Edit</button>
+  </div>
+
+  <!-- Logout Button -->
+  <div class="flex justify-center my-8">
+    <button onclick="logout()" class="px-12 py-3 rounded-full border text-[#c88c4a] border-[#c88c4a] text-lg font-semibold hover:bg-[#f5e5d1] transition">
+      Logout
+    </button>
+  </div>
+</div>
+
+
+  <footer class="bg-[#C4854A] text-white px-6 py-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold">Langganan pelayan</h2>
+        <ul class="space-y-1 text-white">
+          <li>Metode pembayaran</li>
+          <li>Bantuan</li>
+          <li>Gratis ongkir</li>
+          <li>Pengiriman</li>
+        </ul>
+        <p class="mt-6 font-bold">©Seashop 2025</p>
+      </div>
+
+      
+      <div class="mt-10 md:mt-0 space-y-4">
+        <h2 class="text-xl">Ikuti kami</h2>
+        <ul class="space-y-2">
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/facebook.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116C23.408 24 24 23.408 24 22.674V1.326C24 .593 23.408 0 22.675 0z"/></img></span>
+            <span>Facebook</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/instagram.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.428.417a4.9 4.9 0 011.78 1.145 4.9 4.9 0 011.145 1.78c.167.458.36 1.258.417 2.428.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.417 2.428a4.9 4.9 0 01-1.145 1.78 4.9 4.9 0 01-1.78 1.145c-.458.167-1.258.36-2.428.417-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.428-.417a4.9 4.9 0 01-1.78-1.145 4.9 4.9 0 01-1.145-1.78c-.167-.458-.36-1.258-.417-2.428C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.25-1.97.417-2.428A4.9 4.9 0 013.832 2.942a4.9 4.9 0 011.78-1.145c.458-.167 1.258-.36 2.428-.417C8.416 2.212 8.8 2.2 12 2.2zm0 3.3a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 10.7a4.2 4.2 0 110-8.4 4.2 4.2 0 010 8.4zm6.6-11.7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></img></span>
+            <span>Instagram</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/youtube.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6zm12-3c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"/></img></span>
+            <span>Youtube</span>
+          </li>
+        </ul>
+        
+        <div class="flex space-x-4 mt-6">
+          <img src="src/image/Google_Play_Store_badge_EN.svg.webp" alt="Google Play" class="h-10"></img>
+          <img src="src/image/Download_on_the_App_Store_Badge.svg.webp" alt="App Store" class="h-10"></img>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+  </footer>
+
+<script src="src/script/profile.js"></script>
+  </body>
+  </html>

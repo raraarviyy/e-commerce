@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout</title>
+   <link href="./output.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <div class="flex justify-between items-center px-8 py-4 border-b">
+      <!-- Kiri -->
+      <div class="flex items-center gap-4 w-full max-w-xl">
+        <span class="text-xl font-semibold">seashop</span>
+        <div class="flex-grow">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+          />
+        </div>
+      </div>
+    
+      <!-- menu -->
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-gray-600">HOME</a>
+        <a href="#" class="hover:text-gray-600">REKOMENDASI</a>
+        <a href="#" class="hover:text-gray-600">KATEGORI</a>
+       
+        <!-- Keranjang -->
+        <a href="keranjang.html">
+         <img src="src/image/shopping-cart.png" alt="cart" class="h-6 w-6">
+      </a>
+    
+      <!-- Profile -->
+      <a href="profil.html">
+        <img src="src/image/pfp.jpeg" alt="profile" class="w-8 h-8 rounded-full object-cover">
+      </a>
+    
+      </nav>
+    </div>
+    </header>
+    
+    <!-- Spacer supaya konten tidak ketiban navbar -->
+    <div class="h-[90px]"></div>
+
+
+ 
+ <div class="p-6 bg-white text-gray-800">
+  <div class="flex items-center mb-6">
+    <a href="keranjang.html" class="mr-4 text-2xl">←</a>
+    <h1 class="text-xl sm:text-2xl font-bold">Detail pesanan </h1>
+  </div>
+  </div>
+
+    <!-- Informasi Pembeli -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <h2 class="font-semibold mb-2">Informasi Pembeli</h2>
+      <p>Nama: <span class="font-medium">Chico</span></p>
+      <p>No Telepon: <span class="font-medium">08583786482</span></p>
+      <p>Alamat: <span class="font-medium">Jln. Ini aja</span></p>
+    </div>
+
+    <!-- Produk -->
+    <div id="product" class="bg-white p-4 rounded shadow mb-4"></div>
+
+    <!-- Status Pembelian -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <h2 class="font-semibold mb-2">Status Pembelian</h2>
+    <p class="text-green-600 font-semibold mb-2">Sudah Dibayar</p>
+
+      <p class="font-medium">Metode Pembelian</p>
+      <div class="flex gap-4 mb-4">
+        <label><input type="checkbox" checked disabled> Transfer Bank (BCA)</label>
+       
+      </div>
+
+      <!-- Ringkasan -->
+      <div id="product"></div>
+      <div class="space-y-2">
+      <p>Subtotal: <span id="subtotal" class="font-semibold text-gray-700">Rp0</span></p>
+      <p>Ongkir: <span id="ongkir" class="font-semibold text-gray-700">Rp0</span></p>
+      <p class="text-lg font-bold">Total: <span id="total" class="text-amber-700">Rp0</span></p>
+    </div>
+
+    <!-- Tombol -->
+    
+
+  <script src="src/script/pesanan.js"></script>
+</body>
+</html>

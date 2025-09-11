@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body  class="font-sans bg-white">
+  <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+   <div class="flex justify-between items-center px-8 py-4 border-b">
+     <!-- Kiri -->
+     <div class="flex items-center gap-4 w-full max-w-xl">
+       <span class="text-xl font-semibold">seashop</span>
+       <div class="flex-grow">
+         <input
+           type="text"
+           placeholder="Search"
+           class="w-full border rounded-full px-4 py-2 text-left text-gray-500 outline-none"
+         />
+       </div>
+     </div>
+ 
+     <!-- menu -->
+     <nav class="flex items-center gap-6 text-sm">
+       <a href="#" class="hover:text-gray-600">HOME</a>
+       <a href="#" class="hover:text-gray-600">REKOMENDASI</a>
+       <a href="#" class="hover:text-gray-600">KATEGORI</a>
+      
+     <a href="keranjang.html">
+      <img src="/src/image/shopping-cart.png" alt="cart" class="h-6 w-6">
+    </a>
+ 
+     <!-- Profile -->
+     <a href="profil.html">
+       <img src="/src/image/pfp.jpeg" alt="profile" class="w-8 h-8 rounded-full object-cover">
+     </a>
+
+     </nav>
+   </div>
+ </header>
+ 
+ <!-- Spacer supaya konten tidak ketiban navbar -->
+ <div class="h-[90px]"></div>
+ 
+<div class="bg-white text-gray-800">
+  <div class="max-w-6xl mx-auto p-4">
+    <a href="home.html" class="text-black text-2xl mt-2 hover:text-pink-400">
+      ←
+    </a>
+
+
+    <div class="flex flex-col md:flex-row gap-8 p-6">
+  
+  <!-- Image Section -->
+  <div class="md:w-1/2 flex justify-center">
+    <img id="product-image" src="" alt="Product Image" class="max-w-xs max-h-[300px] rounded-lg shadow object-contain"> <!-- Reduced max height -->
+  </div>
+
+  <!-- Text Content Section -->
+  <div class="md:w-1/2 space-y-3 flex flex-col justify-center"> <!-- Added flex and justify-center -->
+    <p class="text-sm text-gray-500">Kategori: <span id="category" class="font-medium text-gray-700"></span></p>
+    <h2 id="title" class="text-xl font-semibold text-gray-900"></h2>
+
+    <p id="price" class="text-lg font-bold text-gray-800"></p> <!-- Moved price above quantity selector -->
+
+    <div class="flex items-center gap-2">
+      <div class="text-yellow-400">★★★★★</div>
+      <p class="text-sm text-gray-600">terjual <span id="sold">120</span></p>
+    </div>
+
+   
+
+    <!-- Quantity Selector -->
+    <div class="flex items-center text-sm text-gray-700 mb-1">
+      <p class="text-sm text-gray-600">Jumlah:</p>
+      <div class="w-full flex justify-start -mt-1 ml-8">
+        <div class="flex items-center bg-gray-300 w-fit rounded">
+          <button onclick="decreaseQty()" class="px-3 py-1 text-black text-xl">-</button>
+          <input type="text" value="1" class="qty-input w-9 text-center bg-white text-black py-2 outline-none" readonly>
+          <button onclick="increaseQty()" class="px-3 py-1 text-black text-xl">+</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Action Button -->
+    <div class="flex space-x-4">
+      <button onclick="tambahKeranjang()" id="add-to-cart-btn" class="bg-[#c88c4a] hover:bg-[#b07a30] text-white px-5 py-2 rounded flex items-center space-x-2">
+        <span>+</span> <span>Keranjang</span>
+      </button>
+      <button id="btn-beli-sekarang" class="border border-[#c88c4a] text-[#c88c4a] hover:bg-[#fdf1e0] px-5 py-2 rounded">
+        Beli sekarang
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- <section class="bg-white p-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+  </div> -->
+</section>
+
+
+
+
+<section class="bg-white p-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Deskripsi -->
+    <div class="bg-orange-50 p-6 rounded shadow-sm">
+      <h2 id="product-desc" class="text-xl font-bold text-gray-800 mb-4">Deskripsi</h2>
+      
+    </div>
+
+    <!-- Rating dan Ulasan -->
+    <div class="bg-orange-50 p-6 rounded shadow-sm relative">
+      <div class="flex justify-between items-start">
+        <h2 class="text-xl font-bold text-gray-800">Rating dan ulasan</h2>
+        <span class="text-2xl font-semibold text-gray-700">&#8594;</span>
+      </div>
+
+      <div class="mt-2 text-lg font-semibold text-gray-900">
+        4.7<span class="text-sm font-normal text-gray-800">/5</span>
+        <span class="text-yellow-500 ml-2">★★★★★</span>
+      </div>
+
+      <!-- Ulasan 1 -->
+      <div class="mt-4 flex gap-3 items-start">
+        <img src="image/Azrealon.webp" alt="User" class="rounded-full w-10 h-10">
+        <div>
+          <p class="font-semibold text-gray-800">Alvin Reno Suherdi</p>
+          <p class="text-yellow-500">★★★★★</p>
+          <p class="text-gray-700 text-sm">Barang sangat bagus, datang sesuai waktu</p>
+        </div>
+      </div>
+
+      <!-- Ulasan 2 -->
+      <div class="mt-4 flex gap-3 items-start">
+        <img src="src/image/wijayawahyuda.jpg" alt="User" class="rounded-full w-10 h-10">
+        <div>
+          <p class="font-semibold text-gray-800">Wijaya Wahyuda</p>
+          <p class="text-yellow-500">★★★★★</p>
+          <p class="text-gray-700 text-sm">barang tidak mengecewakan, kualitas best</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-[#C4854A] text-white px-6 py-10">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+    
+    <div class="space-y-4">
+      <h2 class="text-xl font-bold">Langganan pelayan</h2>
+      <ul class="space-y-1 text-white">
+        <li>Metode pembayaran</li>
+        <li>Bantuan</li>
+        <li>Gratis ongkir</li>
+        <li>Pengiriman</li>
+      </ul>
+      <p class="mt-6 font-bold">©Seashop 2025</p>
+    </div>
+
+    
+    <div class="mt-10 md:mt-0 space-y-4">
+      <h2 class="text-xl">Ikuti kami</h2>
+      <ul class="space-y-2">
+        <li class="flex items-center space-x-2">
+          <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/facebook.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116C23.408 24 24 23.408 24 22.674V1.326C24 .593 23.408 0 22.675 0z"/></img></span>
+          <span>Facebook</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/instagram.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.428.417a4.9 4.9 0 011.78 1.145 4.9 4.9 0 011.145 1.78c.167.458.36 1.258.417 2.428.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.417 2.428a4.9 4.9 0 01-1.145 1.78 4.9 4.9 0 01-1.78 1.145c-.458.167-1.258.36-2.428.417-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.428-.417a4.9 4.9 0 01-1.78-1.145 4.9 4.9 0 01-1.145-1.78c-.167-.458-.36-1.258-.417-2.428C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.25-1.97.417-2.428A4.9 4.9 0 013.832 2.942a4.9 4.9 0 011.78-1.145c.458-.167 1.258-.36 2.428-.417C8.416 2.212 8.8 2.2 12 2.2zm0 3.3a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 10.7a4.2 4.2 0 110-8.4 4.2 4.2 0 010 8.4zm6.6-11.7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></img></span>
+          <span>Instagram</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <span class="flex items-center justify-center h-8 w-8  rounded-full"><img src="src/image/youtube.png" class="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6zm12-3c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"/></img></span>
+          <span>Youtube</span>
+        </li>
+      </ul>
+      
+      <div class="flex space-x-4 mt-6">
+        <img src="src/image/Google_Play_Store_badge_EN.svg.webp" alt="Google Play" class="h-10"></img>
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="w-40">
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="src/script/detail.js"></script>
+</body>
+</html>
