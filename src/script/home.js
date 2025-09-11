@@ -87,3 +87,4 @@ function goToDetail(product) {
   localStorage.setItem("selectedProduct", JSON.stringify(product));
   window.location.href = "detail.html";
 }
+
